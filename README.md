@@ -1,67 +1,52 @@
-## Foundry
+## Storage from zero
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+**Just another project**
 
-Foundry consists of:
+### Identify and arrange each contract according to the outline of the Code:
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+1. Layout of Contract:
 
-## Documentation
+   1. version
+   2. imports
+   3. interfaces, libraries, contracts
+   4. errors
+   5. Type declarations
+   6. State variables
+   7. Events
+   8. Modifiers
+   9. Functions
 
-https://book.getfoundry.sh/
+2. Layout of Functions:
+   1. constructor
+   2. receive function (if exists)
+   3. fallback function (if exists)
+   4. external
+   5. public
+   6. internal
+   7. private
+   8. view & pure functions
 
-## Usage
+### Test Types:
 
-### Build
+1. Unit testing
+2. Integration testing
+3. Forked testing
+4. Staging testing
 
-```shell
-$ forge build
-```
+### Unit testing:
 
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
-# storagefromzero
+1. Create all test files, one per contract
+2. Installations:
+   1. Open Zeppelin
+   2. Chainlink
+   3. Erc721a
+   4. Campaignable
+3. Diagrams
+   1. Order the contract
+   2. Diagrams
+      1. State variables & functions
+4. Basic structure with Test.sol and Contract.sol => example test.
+5. Script de deploy
+6. SetUp, constants and users.
+   1. Setup with contract in variable
+   2. Set the contract owner
