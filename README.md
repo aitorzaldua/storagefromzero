@@ -46,7 +46,7 @@
    2. Diagrams
       1. State variables & functions
 4. Basic structure with Test.sol and Contract.sol => example test.
-5. Script de deploy
+5. Script de deploy.
 6. SetUp, constants and users.
    1. Setup with contract in variable
    2. Set the contract owner

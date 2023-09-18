@@ -3,10 +3,10 @@ pragma solidity ^0.8.18;
 
 import {Test, console} from "forge-std/Test.sol";
 import {OneMinter} from "../src/OneMinter.sol";
+import {DeployOneMinter} from "../script/DeployOneMinter.s.sol";
 
 contract OneMinterTest is Test {
     OneMinter oneMinter;
-
     /////////////
     // USERS ////
     /////////////
@@ -15,14 +15,14 @@ contract OneMinterTest is Test {
     address USER1 = makeAddr("user1");
 
     function setUp() external {
-        vm.prank(DEPLOYER);
-        oneMinter = new OneMinter();
+        DeployOneMinter deployOneMinter = new DeployOneMinter();
+        oneMinter = deployOneMinter.run();
     }
 
-    function testLogs() external view {
+    function testOMLogs() external view {
         console.log("address this:           ", address(this));
-        console.log("contract SimpleStorage: ", address(oneMinter));
-        console.log("SimpleStorage deployer: ", oneMinter.owner());
+        console.log("contract OneMinter:     ", address(oneMinter));
+        console.log("OneMinter deployer:     ", oneMinter.owner());
         console.log("address DEPLOYER:       ", DEPLOYER);
         console.log("address USER1:          ", USER1);
     }

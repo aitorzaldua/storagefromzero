@@ -3,6 +3,7 @@
     "erc721a": "^4.2.3"
   },
   "dependencies": {
+    "hardhat": "^2.17.3",
     "solidity-campaignable": "^1.0.9"
   }
 }
