@@ -8,12 +8,9 @@ import {DeploySimpleStorage} from "../script/DeploySimpleStorage.s.sol";
 contract StakeContractTest is Test {
     SimpleStorage simpleStorage;
 
-    /////////////
-    // USERS ////
-    /////////////
-
     address DEPLOYER = makeAddr("deployer");
     address USER1 = makeAddr("user1");
+    address USER2 = makeAddr("user2");
 
     function setUp() external {
         DeploySimpleStorage deploySimpleStorage = new DeploySimpleStorage();
@@ -26,5 +23,6 @@ contract StakeContractTest is Test {
         console.log("SimpleStorage deployer: ", simpleStorage.owner());
         console.log("address DEPLOYER:       ", DEPLOYER);
         console.log("address USER1:          ", USER1);
+        console.log("address USER2:          ", USER2);
     }
 }
